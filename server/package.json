@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "stop": "lsof -n -P -i :6000 | awk '{print $2}' | awk 'FNR == 2 {print}' | xargs kill -9 ",
+    "restart": "lsof -n -P -i :6000 | awk '{print $2}' | awk 'FNR == 2 {print}' | xargs kill -9 | node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "hbs": "~4.0.1",
+    "knex": "^0.14.4",
+    "morgan": "~1.9.0",
+    "pg": "^7.4.1",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}

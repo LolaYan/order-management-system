@@ -1,0 +1,27 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">User Name</th>
+      <th scope="col">User Email</th>
+      <th scope="col">User Phone</th>
+      <th scope="col">User Role</th>
+      <th scope="col">User Gender</th>
+      <th scope="col">User Address</th>
+      <th scope="col">Wechat Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row">{{name}}</th>
+      <td>{{email}}</td>
+      <td>{{phone}}</td>
+      <td>{{role}}</td>
+      <td>{{gender}}</td>
+      <td>{{address}}</td>
+      <td>{{wechat_id}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/users/new" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add new client</a>

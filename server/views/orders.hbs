@@ -1,0 +1,27 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">Order Number</th>
+      <th scope="col">Status</th>
+      <th scope="col">Client</th>
+      <th scope="col">Order Date</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Order Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each orders}}
+    <tr>
+      <th scope="row">{{order_id}}</th>
+      <td>{{order_number}}</td>
+      <td>{{order_status}}</td>
+      <td>{{client_id}}</td>
+      <td>{{order_date}}</td>
+      <td>{{due_date}}</td>
+      <td>{{order_comment}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/orders/new" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Add new order</a>
