@@ -1,10 +1,8 @@
 /* global Handlebars, prompt */
 'use strict';
 
-// The client-side "app" which leverages the shared Handlebars "echo" template.
-// This will prompt the user for a message, then echo it out by rendering the
-// message using the shared template which was exposed by the server.
-(function () {
+(
+    function addNewOrderItemRow() {
     var button = document.getElementById('addNewOrderItemRowButton');
 
     button.addEventListener('click', function (event) {
@@ -21,9 +19,7 @@
         var colCount = table.rows[1].cells.length;
 
         for (var i = 1; i < colCount; i++) {
-
             var newcell = row.insertCell(i);
-
             newcell.innerHTML = table.rows[1].cells[i].innerHTML;
             //alert(newcell.childNodes);
             switch (newcell.childNodes[0].type) {
