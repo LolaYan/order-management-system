@@ -17,12 +17,58 @@
     <div class="form-group col-md-6">
       <label for="newOrderClientEmail">Client Email</label>
       <input type="email" class="form-control" id="newOrderClientEmail" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
   </div>
+
+  <div class="form-row">
+    <label for="newOrderItems">Add Order Items</label>
+    <table id="newOrderItemTable" class="table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Color</th>
+          <th scope="col">Unit Price</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Note</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <input type="text" class="form-control">
+          </td>
+          <td>
+            <button type="submit" class="btn btn-primary">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="addNewOrderItemRowButton" onclick="addRow" class="btn btn-primary">Add new order item</button>
+  </div>
+
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>
