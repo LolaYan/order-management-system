@@ -4,8 +4,6 @@ exports.up = function (knex, Promise) {
     // add user table
     knex.schema.createTable('users', function (table) {
       table.increments('user_id').primary();
-      table.string('username').notNullable();
-      table.string('password').notNullable();
       table.string('name').notNullable();
       table.string('email').notNullable();
       table.string('phone');
@@ -13,6 +11,16 @@ exports.up = function (knex, Promise) {
       table.string('gender');
       table.string('wechat_id');
       table.string('role').notNullable();
+      table.timestamps(true, true);
+    }),
+    knex.schema.createTable('admin_users', function (table) {
+      table.increments('user_id').primary();
+      table.string('username').notNullable();
+      table.string('password').notNullable();
+      table.string('name').notNullable();
+      table.string('email').notNullable();
+      table.string('phone');
+      table.string('address');
       table.timestamps(true, true);
     }),
 
