@@ -2,6 +2,7 @@
 
 We'll be using:
 * postgres for our database
+https://postgresapp.com/
 * knex.js for our database migrations, seeds and queries.
 * express.js for our routes and rendering
 * handlebars.js for our server side view templates
